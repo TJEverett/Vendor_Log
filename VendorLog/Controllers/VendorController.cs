@@ -11,7 +11,7 @@ namespace MusicOrganizer.Controllers
     public ActionResult Index()
     {
       List<Vendor> vendorList = Vendor.GetAll();
-      return View();
+      return View(vendorList);
     }
 
     [HttpGet("/vendor/new")]
