@@ -1,0 +1,27 @@
+@{
+  Layout = "_Layout";
+}
+
+@using VendorLog.Models;
+
+<h1>Vendor Info</h1>
+<br>
+<br>
+<p>Vendor Name: @Model.Name</p>
+<p>Vendor Description: @Model.Description</p>
+<br>
+<p>Vendor Orders:</p>
+<ul>
+  @foreach (Order order in @Model.Orders)
+  {
+    <li><a href="/vendor/@Model.Id/order/@order.Id">@order.Title</a></li>
+  }
+</ul>
+<br>
+<form action="/vendor/@Model.Id/order/new" method="GET">
+  <button type="submit" class="btn">Add an Order to the List</button>
+</form>
+<br>
+<form action="/vendor" method="GET">
+  <button type="submit" class="btn">Return to Vendor List</button>
+</form>
