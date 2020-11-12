@@ -1,12 +1,12 @@
 # Vendor Log
 
-#### _Track Vendors and Their Orders, 10/29/2020_
+#### _Track Vendors and Their Orders, 11/12/2020_
 
 #### By _**Tristen Everett**_
 
 ## Description
 
-This project was an attempt at showing the skills that I learned to program in C#. In this project I build a ASP.NET MVC webapp that allows
+This project was an attempt at showing the skills that I learned to program in C#. In this project I build a ASP.NET MVC webapp that allows the user to create vendors and then create orders that belong to the vendor. The user is able to navigate to the different orders from the vendor's page or create new orders.
 
 ## Setup/Installation Requirements
 
