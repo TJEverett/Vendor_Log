@@ -1,0 +1,17 @@
+@{
+  Layout = "_Layout";
+}
+
+@using VendorLog.Models;
+
+<h1>Order Info</h1>
+<br>
+<br>
+<p>Order Title: @Model["order"].Title</p>
+<p>Order Description: @Model["order"].Description</p>
+<p>Order Price: @Model["order"].Price</p>
+<p>Order Date: @Model["order"].GetDate()</p>
+<br>
+<form action='/vendor/@Model["vendor"].Id' method="GET">
+  <button type="submit" class="btn">Return to Vendor</button>
+</form>
