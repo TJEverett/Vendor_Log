@@ -7,20 +7,20 @@ namespace MusicOrganizer.Controllers
 {
   public class VendorController : Controller
   {
-    [HttpGet("/vendor")]
+    [HttpGet("/vendors")]
     public ActionResult Index()
     {
       List<Vendor> vendorList = Vendor.GetAll();
       return View(vendorList);
     }
 
-    [HttpGet("/vendor/new")]
+    [HttpGet("/vendors/new")]
     public ActionResult New()
     {
       return View();
     }
 
-    [HttpPost("/vendor")]
+    [HttpPost("/vendors")]
     public ActionResult Create(string name, string description)
     {
       if (String.IsNullOrWhiteSpace(description))
@@ -36,7 +36,7 @@ namespace MusicOrganizer.Controllers
       return RedirectToAction("Index");
     }
 
-    [HttpGet("/vendor/{id}")]
+    [HttpGet("/vendors/{id}")]
     public ActionResult Show(int id)
     {
       Vendor foundVendor = Vendor.Find(id);

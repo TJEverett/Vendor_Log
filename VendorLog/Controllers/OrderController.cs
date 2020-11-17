@@ -7,14 +7,14 @@ namespace MusicOrganizer.Controllers
 {
   public class OrderController : Controller
   {
-    [HttpGet("/vendor/{vendorId}/order/new")]
+    [HttpGet("/vendors/{vendorId}/orders/new")]
     public ActionResult New(int vendorId)
     {
       Vendor foundVendor = Vendor.Find(vendorId);
       return View(foundVendor);
     }
 
-    [HttpPost("/vendor/{routeId}/order")]
+    [HttpPost("/vendors/{routeId}/orders")]
     public ActionResult Create(int routeId, int vendorId, string title, string description, double price, string date)
     {
       if (String.IsNullOrWhiteSpace(description))
@@ -32,7 +32,7 @@ namespace MusicOrganizer.Controllers
       return RedirectToAction("Index", "Vendor");
     }
 
-    [HttpGet("/vendor/{vendorId}/order/{orderId}")]
+    [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
     public ActionResult Show(int vendorId, int orderId)
     {
       Vendor foundVendor = Vendor.Find(vendorId);

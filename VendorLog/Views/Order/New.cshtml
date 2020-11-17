@@ -2,11 +2,9 @@
   Layout = "_Layout";
 }
 
-@using VendorLog.Models;
-
 <h1>New Order Form:</h1>
 <br>
-<form action="/vendor/@Model.Id/order" method="POST">
+<form action="/vendors/@Model.Id/orders" method="POST">
   <input type="hidden" name="vendorId" id="vendorId" value="@Model.Id">
   <label for="title">Order Title:</label>
   <input type="text" name="title" id="title" placeholder="TITLE">

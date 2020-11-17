@@ -14,14 +14,14 @@
 <ul>
   @foreach (Order order in @Model.Orders)
   {
-    <li><a href="/vendor/@Model.Id/order/@order.Id">@order.Title</a></li>
+    <li><a href="/vendors/@Model.Id/orders/@order.Id">@order.Title</a></li>
   }
 </ul>
 <br>
-<form action="/vendor/@Model.Id/order/new" method="GET">
+<form action="/vendors/@Model.Id/orders/new" method="GET">
   <button type="submit" class="btn">Add an Order to the List</button>
 </form>
 <br>
-<form action="/vendor" method="GET">
+<form action="/vendors" method="GET">
   <button type="submit" class="btn">Return to Vendor List</button>
 </form>
