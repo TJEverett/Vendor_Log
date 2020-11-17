@@ -29,7 +29,7 @@ namespace MusicOrganizer.Controllers
         foundVendor.AddOrder(newOrder);
       }
 
-      return RedirectToAction("Index", "Vendor");
+      return RedirectToAction("Index", "Vendors");
     }
 
     [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
